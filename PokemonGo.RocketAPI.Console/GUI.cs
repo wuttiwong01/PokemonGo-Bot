@@ -100,6 +100,7 @@ namespace PokemonGo.RocketAPI.Console
             b.Add("spain.json");
             b.Add("tr.json");
             b.Add("arabic.json");
+            b.Add("th.json");
 
             foreach (var l in b)
                 Extract("PokemonGo.RocketAPI.Console", Program.path_translation, "Lang", l);
@@ -1069,7 +1070,8 @@ namespace PokemonGo.RocketAPI.Console
                 lang_ptBR_btn,
                 lang_tr_btn,
                 lang_ru_btn,
-                lang_france_btn
+                lang_france_btn,
+                lang_th_btn
 
                 // add the new languages' buttons here
             };
