@@ -48,11 +48,6 @@ namespace PokemonGo.RocketAPI.Console
         {
             _clientSettings = new Settings();
             Globals.FirstLoad = false;
-            var ret = MessageBox.Show("ATTENTION:\nYOU CAN GET BANNED USING THIS BOT\nTHE API IS NOT UPDATE YET\nContinue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-            if (ret == DialogResult.No)
-            {
-                Application.Exit();
-            }
             Directory.CreateDirectory(Program.path);
             Directory.CreateDirectory(Program.path_translation);
             Directory.CreateDirectory(Program.path_pokedata);
@@ -528,7 +523,7 @@ namespace PokemonGo.RocketAPI.Console
             selectedCoords = selectedCoords.Replace(",",".");
             if (selectedCoords.Equals(NEW_YORK_COORS))
             {
-                var ret = MessageBox.Show("Have you set correctly your location?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var ret = MessageBox.Show("Have you set correctly your location? (It seems like you are using default coords. This can lead to an auto-ban from niantic)", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (ret == DialogResult.No)
                 {
                     return;
